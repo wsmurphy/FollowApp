@@ -9,6 +9,7 @@
 #import "FGLevel2Scene.h"
 #import "FGMenuScene.h"
 #import "FGFailedScene.h"
+#import "FGHighScoreScene.h"
 #import "ColorConstants.h"
 #import "SpriteContstants.h"
 
@@ -20,7 +21,6 @@
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
         
         self.backgroundColor = kColorStandardBackground;
         
@@ -115,7 +115,6 @@
     UITouch *touch = [touches anyObject];
     
     SKNode *touchedNode = [self nodeAtPoint:[touch locationInNode:self]];
-    NSLog(@"Node name: %@", touchedNode.name);
     
     if([touchedNode isKindOfClass:[SKSpriteNode class]]) {
         if([touchedNode.name isEqualToString:@"0"] ||
@@ -127,8 +126,7 @@
     
             NSString *guess = touchedNode.name;
             NSNumber *guessComp = playArray[touchCount - 1];
-            if(guess.intValue == guessComp.intValue) {
-                NSLog(@"Match: %@ %@", guess, guessComp);
+            if(guess.intValue == guessComp.intValue) { //Touch was in sequence
                 if(touchCount == playArray.count) {
                     //Update "longest streak" counter
                     countLabel.text = [NSString stringWithFormat:@"%d", touchCount];
@@ -136,18 +134,18 @@
                     touchCount = 0;
                    [self startPlay];
                 }
-            } else {
-                NSLog(@"Fail");
-                
+            } else { //Touch was out of sequence
                 NSInteger highScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"];
                 if(playArray.count - 1 > highScore) {
-                    //TODO:Go to high score view
+                    //Update high score and display high score view
                     [[NSUserDefaults standardUserDefaults] setInteger:playArray.count - 1 forKey:@"highScore"];
+                    FGHighScoreScene *hg = [[FGHighScoreScene alloc] initWithSize:self.size];
+                    [self.view presentScene:hg];
+                } else {
+                    FGFailedScene *failedScene = [[FGFailedScene alloc] initWithSize:self.size];
+                    failedScene.currentScore = playArray.count - 1;
+                    [self.view presentScene:failedScene];
                 }
-                
-                FGFailedScene *failedScene = [[FGFailedScene alloc] initWithSize:self.size];
-                failedScene.currentScore = playArray.count - 1;
-                [self.view presentScene:failedScene];
             }
         } else {
             if([touchedNode.name isEqualToString:@"MenuIcon"]) {

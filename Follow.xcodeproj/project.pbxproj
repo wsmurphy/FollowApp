@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6025757A1985ED5800DDB039 /* FGMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 602575791985ED5800DDB039 /* FGMenuScene.m */; };
+		603CE53D198B165600662DC8 /* FGHighScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 603CE53C198B165600662DC8 /* FGHighScoreScene.m */; };
 		609F0A94194BE11000BA6162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609F0A93194BE11000BA6162 /* Foundation.framework */; };
 		609F0A96194BE11000BA6162 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609F0A95194BE11000BA6162 /* CoreGraphics.framework */; };
 		609F0A98194BE11000BA6162 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609F0A97194BE11000BA6162 /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		602575781985ED5800DDB039 /* FGMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGMenuScene.h; sourceTree = "<group>"; };
 		602575791985ED5800DDB039 /* FGMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGMenuScene.m; sourceTree = "<group>"; };
+		603CE53B198B165600662DC8 /* FGHighScoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FGHighScoreScene.h; sourceTree = "<group>"; };
+		603CE53C198B165600662DC8 /* FGHighScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGHighScoreScene.m; sourceTree = "<group>"; };
 		609F0A90194BE11000BA6162 /* Follow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Follow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609F0A93194BE11000BA6162 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		609F0A95194BE11000BA6162 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				602575791985ED5800DDB039 /* FGMenuScene.m */,
 				60BC2BF81988816D00317BE8 /* FGFailedScene.h */,
 				60BC2BF91988816D00317BE8 /* FGFailedScene.m */,
+				603CE53B198B165600662DC8 /* FGHighScoreScene.h */,
+				603CE53C198B165600662DC8 /* FGHighScoreScene.m */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				60BC2BFA1988816D00317BE8 /* FGFailedScene.m in Sources */,
 				609F0AA6194BE11000BA6162 /* FGAppDelegate.m in Sources */,
 				609F0AAC194BE11000BA6162 /* FGViewController.m in Sources */,
+				603CE53D198B165600662DC8 /* FGHighScoreScene.m in Sources */,
 				609F0AAF194BE11000BA6162 /* FGTutorialScene.m in Sources */,
 				6025757A1985ED5800DDB039 /* FGMenuScene.m in Sources */,
 				609F0AD5194D2C3C00BA6162 /* FGLevel2Scene.m in Sources */,
