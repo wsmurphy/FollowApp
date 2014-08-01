@@ -6,7 +6,6 @@
 //
 //
 
-//TODO: Make high-score screen
 //TODO: Add menu content
 //TODO: Make splash screen\title screen
 //TODO: Integrate Game Center
