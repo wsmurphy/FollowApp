@@ -18,13 +18,13 @@
         
         self.backgroundColor = kColorStandardBackground;
         
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         label.text = @"New High Score!!";
         label.fontSize = 30;
         label.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2 + 120);
         [self addChild:label];
         
-        SKLabelNode *highScore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *highScore = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         highScore.text = [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]];
         highScore.fontSize = 44;
         highScore.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2 + 60);
@@ -40,7 +40,7 @@
         boxNode.name = @"TryAgainBox";
         [self addChild:boxNode];
         
-        SKLabelNode *tryAgainLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue Bold"];
+        SKLabelNode *tryAgainLabel = [SKLabelNode labelNodeWithFontNamed:kBoldFont];
         tryAgainLabel.text = @"Play Again";
         tryAgainLabel.fontSize = 30;
         tryAgainLabel.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);

@@ -17,4 +17,10 @@
 #define kColorStandardNodeThree  [SKColor colorWithRed:1.0f green:0.412f blue:0.149f alpha:1.0f]
 #define kColorStandardNodeFour   [SKColor colorWithRed:0.40f green:0.192f blue:0.827f alpha:1.0f]
 
+#define kRegularFont @"ComicNeue-Regular"
+#define kBoldFont @"ComicNeue-Bold"
+
+//#define kRegularFont @"HelveticaNeue"
+//#define kBoldFont @"HelveticaNeue-Bold"
+
 #endif

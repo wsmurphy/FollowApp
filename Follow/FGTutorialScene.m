@@ -19,7 +19,7 @@
         
         self.backgroundColor = kColorStandardBackground;
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         
         myLabel.text = @"Tap the box!";
         myLabel.fontSize = 30;
@@ -48,7 +48,7 @@
     NSLog(@"Node name: %@", touchedNode.name);
     
     if([touchedNode isKindOfClass:[SKSpriteNode class]]) {
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         
         label.text = @"Good!";
         label.fontSize = 40;
