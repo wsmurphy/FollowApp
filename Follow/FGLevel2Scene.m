@@ -33,7 +33,7 @@
         menuIcon.name = @"MenuIcon";
         [self addChild:menuIcon];
         
-        countLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        countLabel = [SKLabelNode labelNodeWithFontNamed:kBoldFont];
         
         countLabel.text = @"0";
         countLabel.fontSize = 30;
@@ -64,7 +64,7 @@
                     break;
             }
             
-            sprite.name = [NSString stringWithFormat:@"%d", i];
+            sprite.name = [NSString stringWithFormat:@"%ld", (long)i];
             [self addChild:sprite];
         }
         
@@ -82,7 +82,7 @@
     }
     
     NSInteger r = arc4random() % 4;
-    NSNumber *rand = [NSNumber numberWithInt:r];
+    NSNumber *rand = [NSNumber numberWithInteger:r];
     
     [playArray addObject:rand];
     
@@ -129,7 +129,7 @@
             if(guess.intValue == guessComp.intValue) { //Touch was in sequence
                 if(touchCount == playArray.count) {
                     //Update "longest streak" counter
-                    countLabel.text = [NSString stringWithFormat:@"%d", touchCount];
+                    countLabel.text = [NSString stringWithFormat:@"%ld", (long)touchCount];
                     
                     touchCount = 0;
                    [self startPlay];
@@ -161,4 +161,5 @@
     SKTransition *slideIn = [SKTransition moveInWithDirection:SKTransitionDirectionLeft duration:0.5];
     [self.view presentScene:menuScene transition:slideIn];
 }
+
 @end

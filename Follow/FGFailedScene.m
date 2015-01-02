@@ -20,7 +20,7 @@
         
         self.backgroundColor = kColorStandardBackground;
         
-        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *label = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         label.text = @"Oops!";
         label.fontSize = 30;
         label.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2 + 120);
@@ -36,7 +36,7 @@
         boxNode.name = @"TryAgainBox";
         [self addChild:boxNode];
         
-        SKLabelNode *tryAgainLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue Bold"];
+        SKLabelNode *tryAgainLabel = [SKLabelNode labelNodeWithFontNamed:kBoldFont];
         tryAgainLabel.text = @"Try Again";
         tryAgainLabel.fontSize = 30;
         tryAgainLabel.position = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2 + 60);
@@ -53,27 +53,26 @@
             boxNode.hidden = NO;
             [boxNode runAction:[SKAction sequence:@[[SKAction scaleTo:1.5 duration:0.2], [SKAction waitForDuration:0.2],[SKAction scaleTo:1.0 duration:0.2], [SKAction waitForDuration:0.2]]]];
         }];
-        
-        
-        SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+
+        SKLabelNode *scoreLabel = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         scoreLabel.text = @"Score";
         scoreLabel.fontSize = 24;
         scoreLabel.position = CGPointMake(self.frame.size.width / 4, self.frame.size.height / 2 - 40);
         [self addChild:scoreLabel];
         
-        score = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        score = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         score.text = [NSString stringWithFormat:@"%ld", (long)self.currentScore];
         score.fontSize = 24;
         score.position = CGPointMake(self.frame.size.width / 4, self.frame.size.height / 2 - 75);
         [self addChild:score];
         
-        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         highScoreLabel.text = @"High Score";
         highScoreLabel.fontSize = 24;
         highScoreLabel.position = CGPointMake(self.frame.size.width / 4 + self.frame.size.width / 2, self.frame.size.height / 2 - 40);
         [self addChild:highScoreLabel];
         
-        SKLabelNode *highScore = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Nueue"];
+        SKLabelNode *highScore = [SKLabelNode labelNodeWithFontNamed:kRegularFont];
         highScore.text = [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]];
         highScore.fontSize = 24;
         highScore.position = CGPointMake(self.frame.size.width / 4 + self.frame.size.width / 2, self.frame.size.height / 2 - 75);
@@ -95,7 +94,6 @@
     SKNode *touchedNode = [self nodeAtPoint:[touch locationInNode:self]];
     NSLog(@"Node name: %@", touchedNode.name);
     
-    //TODO: Fix tapped region
     if([touchedNode.name isEqualToString:@"TryAgain"] || [touchedNode.name isEqualToString:@"TryAgainBox"]) {
         FGLevel2Scene *levelScene = [[FGLevel2Scene alloc] initWithSize:self.size];
         [self.view presentScene:levelScene];

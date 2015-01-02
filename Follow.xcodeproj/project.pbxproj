@@ -27,6 +27,8 @@
 		609F0AC6194BE11000BA6162 /* FollowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 609F0AC5194BE11000BA6162 /* FollowTests.m */; };
 		609F0AD5194D2C3C00BA6162 /* FGLevel2Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 609F0AD4194D2C3C00BA6162 /* FGLevel2Scene.m */; };
 		60BC2BFA1988816D00317BE8 /* FGFailedScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BC2BF91988816D00317BE8 /* FGFailedScene.m */; };
+		60F179201A16A6A00053C801 /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60F1791F1A16A6A00053C801 /* ComicNeue-Regular.ttf */; };
+		60F179221A16B7EE0053C801 /* ComicNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60F179211A16A7730053C801 /* ComicNeue-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		60BC2BF91988816D00317BE8 /* FGFailedScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FGFailedScene.m; sourceTree = "<group>"; };
 		60BDFE131985D5B000A147FD /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
 		60BDFE141985D99C00A147FD /* SpriteContstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteContstants.h; sourceTree = "<group>"; };
+		60F1791F1A16A6A00053C801 /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
+		60F179211A16A7730053C801 /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		609F0A87194BE11000BA6162 = {
 			isa = PBXGroup;
 			children = (
+				60F1791E1A16A65F0053C801 /* Resources */,
 				609F0A9B194BE11000BA6162 /* Follow */,
 				609F0ABF194BE11000BA6162 /* FollowTests */,
 				609F0A92194BE11000BA6162 /* Frameworks */,
@@ -185,6 +190,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		60F1791E1A16A65F0053C801 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60F179231A16B9390053C801 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		60F179231A16B9390053C801 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				60F179211A16A7730053C801 /* ComicNeue-Bold.ttf */,
+				60F1791F1A16A6A00053C801 /* ComicNeue-Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,7 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F179201A16A6A00053C801 /* ComicNeue-Regular.ttf in Resources */,
 				609F0AA0194BE11000BA6162 /* InfoPlist.strings in Resources */,
+				60F179221A16B7EE0053C801 /* ComicNeue-Bold.ttf in Resources */,
 				609F0AB3194BE11000BA6162 /* Images.xcassets in Resources */,
 				609F0AA9194BE11000BA6162 /* Main.storyboard in Resources */,
 			);
@@ -371,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -403,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -417,6 +441,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Follow/Follow-Prefix.pch";
 				INFOPLIST_FILE = "Follow/Follow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
@@ -431,6 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Follow/Follow-Prefix.pch";
 				INFOPLIST_FILE = "Follow/Follow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;

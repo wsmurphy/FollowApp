@@ -6,7 +6,11 @@
 //
 //
 
+//TODO: Add random modes (swap, rotate, +2, etc)
+//TODO: Add option to turn on\off random options
+//TODO: XCText
 //TODO: Add menu content
+//TODO: Colorblind Mode
 //TODO: Make splash screen\title screen
 //TODO: Integrate Game Center
 //TODO: Integrate analytics
@@ -20,7 +24,6 @@
 {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
     
     return YES;
 }
